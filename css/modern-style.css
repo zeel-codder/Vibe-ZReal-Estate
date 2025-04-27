@@ -1,0 +1,585 @@
+/* Modern Style CSS for Real Estate Website */
+
+/* General Styles */
+:root {
+  --primary-color: #0BE0FD;
+  --secondary-color: #2563eb;
+  --accent-color: #e67e22;
+  --dark-color: #1e3a8a;
+  --light-gray: #f8f9fa;
+  --dark-gray: #343a40;
+  --text-color: #333;
+  --transition: all 0.3s ease;
+  --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  
+  /* Modern Font System */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  --ui-font: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #f5f7fa;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: -0.01em;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 30px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Navigation */
+.navbar-inverse {
+  background-color: var(--primary-color);
+  border-color: transparent;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+  font-weight: 700;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: rgba(255,255,255,0.8);
+  transition: var(--transition);
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: white;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: var(--secondary-color);
+}
+
+/* Cards & Property Listings */
+.properties {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background-color: white;
+  position: relative;
+  border: 1px solid #f0f0f0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.properties:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-holder {
+  position: relative;
+  overflow: hidden;
+  height: 240px; /* Fixed height for consistency */
+}
+
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.properties:hover .image-holder img {
+  transform: scale(1.1);
+}
+
+/* 3x3 Grid Layout */
+.property-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  .property-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .property-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(14, 165, 233, 0.8), rgba(30, 64, 175, 0.9)), url('../images/bginside.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Banner & Search */
+.banner-search {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.main-search {
+  margin-bottom: 15px;
+}
+
+.search-filters {
+  margin-top: 15px;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.btn-success {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+.btn-success:hover {
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+
+.btn-info {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-info:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.btn-outline-primary {
+  color: var(--secondary-color);
+  background-color: transparent;
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-primary:hover {
+  color: white;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Inside Banner */
+.inside-banner {
+  background: linear-gradient(rgba(14, 165, 233, 0.8), rgba(30, 64, 175, 0.9)), url('../images/bginside.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 50px 0;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.inside-banner h2 {
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  font-size: 32px;
+}
+
+.inside-banner p {
+  opacity: 0.9;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Search Form */
+.search-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+}
+
+.search-form h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.search-form .form-control {
+  height: 45px;
+  border-radius: 4px;
+}
+
+.search-form .btn {
+  height: 45px;
+}
+
+/* Featured Section */
+.featured-section {
+  padding: 50px 0;
+}
+
+.featured-title {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-title h2 {
+  margin: 0;
+}
+
+/* Property Details */
+.property-detail-section {
+  padding: 30px 0;
+}
+
+.property-slider {
+  margin-bottom: 30px;
+}
+
+.property-details {
+  margin-bottom: 30px;
+}
+
+.property-details h3 {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  margin-right: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.badge.sale {
+  background-color: #e67e22;
+}
+
+.badge.rent {
+  background-color: #3498db;
+}
+
+.badge.available {
+  background-color: #2ecc71;
+}
+
+.badge.not-available {
+  background-color: #e74c3c;
+}
+
+.property-section {
+  margin-bottom: 30px;
+}
+
+.property-description {
+  line-height: 1.8;
+  color: #555;
+}
+
+.property-sidebar {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.property-price-card, .property-features-card, .agent-card {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.property-price {
+  color: var(--accent-color);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.property-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.property-features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.property-features-list li i {
+  color: var(--secondary-color);
+  margin-right: 10px;
+  min-width: 20px;
+}
+
+.agent-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.agent-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.agent-contact a {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.agent-contact a i {
+  color: var(--secondary-color);
+  margin-right: 8px;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: var(--light-gray);
+  padding: 50px 0;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  margin: 0 10px;
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Blog Posts */
+.blog-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+}
+
+.blog-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.1);
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-date {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.blog-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.blog-excerpt {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Recent Properties */
+.recent-props {
+  margin-bottom: 30px;
+}
+
+.recent-prop-item {
+  display: flex;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.recent-prop-img {
+  width: 80px;
+  height: 60px;
+  min-width: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.property-price {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-section {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-search {
+    padding: 20px;
+  }
+  
+  .search-filters {
+    margin-top: 10px;
+  }
+  
+  .search-filters > div {
+    margin-bottom: 10px;
+  }
+  
+  .properties {
+    max-width: 500px;
+    margin: 0 auto 25px;
+  }
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,104 @@
+/* Enhanced Navbar Styling with Neutral Colors */
+.navbar-inverse {
+    background-color: #1e3a8a; /* Updated background color */
+    border-color: transparent; /* Updated border color */
+    font-family: var(--ui-font); /* Added font-family */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Updated box-shadow */
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+    font-family: var(--heading-font); /* Added font-family */
+    font-weight: 600; /* Updated font-weight */
+    font-size: 22px;
+    letter-spacing: -0.01em; /* Added letter-spacing */
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: #f8f9fa;
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #f8f9fa; /* Very light gray for better contrast */
+    font-family: var(--ui-font); /* Added font-family */
+    font-weight: 500; /* Updated font-weight */
+    letter-spacing: 0.01em; /* Added letter-spacing */
+    text-transform: uppercase; /* Added text-transform */
+    font-size: 13px; /* Updated font-size */
+    transition: all 0.3s ease;
+    padding: 15px 12px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #555555;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background-color: #555555;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #555555;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #555555;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+    border-color: #555555;
+}
+
+.dropdown-menu {
+    background-color: #333333;
+    font-family: var(--ui-font); /* Added font-family */
+    border-radius: 8px; /* Added border-radius */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Updated box-shadow */
+    border: none; /* Updated border */
+    padding: 10px 0; /* Updated padding */
+}
+
+.dropdown-menu > li > a {
+    color: #f8f9fa;
+    padding: 8px 20px; /* Updated padding */
+    font-weight: 400; /* Updated font-weight */
+    transition: all 0.2s ease; /* Updated transition */
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: #555555;
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #f8f9fa;
+    }
+    
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ffffff;
+        background-color: #555555;
+    }
+}

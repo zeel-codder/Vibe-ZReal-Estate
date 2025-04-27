@@ -1,0 +1,231 @@
+/* Property Detail Page Styles */
+
+/* Property Detail Header */
+.property-detail-header {
+  border-left: 4px solid #28a745;
+}
+
+.property-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  font-family: var(--heading-font);
+  letter-spacing: -0.01em;
+}
+
+.property-address {
+  color: #666;
+  font-size: 15px;
+  font-family: var(--body-font);
+}
+
+.property-meta .badge {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-family: var(--ui-font);
+}
+
+.badge.sale {
+  background-color: #007bff;
+  color: white;
+}
+
+.badge.rent {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.badge.bg-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge.bg-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Property Image Carousel */
+.property-images .carousel {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.carousel-indicators {
+  bottom: 0;
+}
+
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
+}
+
+.carousel-control {
+  width: 10%;
+  opacity: 0.6;
+}
+
+.carousel-control:hover {
+  opacity: 1;
+}
+
+/* Property Info Sections */
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  font-family: var(--heading-font);
+}
+
+.section-title i {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+.property-description p {
+  color: #555;
+  line-height: 1.7;
+  font-family: var(--body-font);
+}
+
+.specs-item .specs-label {
+  color: #666;
+  font-weight: 500;
+  font-family: var(--ui-font);
+}
+
+.specs-item .specs-value {
+  font-weight: 600;
+  color: #333;
+  font-family: var(--body-font);
+}
+
+.feature-box {
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature-box i {
+  font-size: 24px;
+}
+
+.feature-count {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 5px 0;
+  color: #333;
+  font-family: var(--heading-font);
+}
+
+/* Sidebar Cards */
+.property-sidebar > div {
+  transition: all 0.3s ease;
+}
+
+.property-sidebar > div:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.property-price {
+  font-size: 26px;
+  font-family: var(--ui-font);
+  font-weight: 600;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  font-family: var(--heading-font);
+}
+
+.property-features-list li {
+  color: #555;
+  font-family: var(--body-font);
+}
+
+.property-features-list i {
+  font-size: 18px;
+}
+
+/* Agent Card */
+.agent-name {
+  font-size: 18px;
+  border-bottom: 2px solid #f8f9fa;
+  padding-bottom: 10px;
+  font-family: var(--heading-font);
+  font-weight: 600;
+}
+
+.agent-contact {
+  color: #555;
+  font-family: var(--body-font);
+}
+
+/* Similar Properties Card */
+.similar-property-item:last-child {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.similar-property-item h6 {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.similar-property-img img {
+  transition: all 0.3s ease;
+}
+
+.similar-property-img:hover img {
+  transform: scale(1.05);
+}
+
+/* Map Container */
+.property-map {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Media Queries for Responsive Layout */
+@media (max-width: 992px) {
+  .property-detail-header {
+    text-align: center;
+  }
+  
+  .property-meta {
+    justify-content: center;
+  }
+  
+  .property-sidebar {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .property-title {
+    font-size: 20px;
+  }
+  
+  .feature-box {
+    margin-bottom: 15px;
+  }
+}
